@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+
+ .flat-show-card {
+  background: #F8F9FA;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 1px 1px 2px rgb(0 0 0 / 10%);
+  border-radius: 3px
+  }
+
+  .flat-show-address {
+    font-weight: 300;
+    font-size: 20px;
+    color: #333;
+}

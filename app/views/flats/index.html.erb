@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container my-3">
 
   <h1>All our Flats (<%= Flat.count %>)</h1>
 
@@ -12,9 +12,9 @@
             <%= raw("<i class='fa-solid fa-euro-sign'></i>")%> <%= flat.price_per_night %></p>
           </div>
           <div class="card-footer">
-            <a href="#" class="card-link primary">More info</a>
-            <a href="#" class="card-link warning">Edit</a>
-            <a href="#" class="card-link danger">Remove</a>
+            <%= link_to "More info", flat_path(flat), class: "card-link text-primary"%>
+            <%= link_to "Edit", edit_flat_path(flat), class: "card-link text-warning"%>
+            <%= link_to "Remove", "#", class: "card-link text-danger"%>
           </div>
         </div>
       <% end %>
