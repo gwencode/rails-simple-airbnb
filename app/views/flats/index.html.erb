@@ -1,0 +1,18 @@
+<div class="container">
+
+  <h1>All our Flats (<%= Flat.count %>)</h1>
+
+  <div class="card row" style="width: 18rem;">
+    <% @flats.each do |flat| %>
+        <div class="card-body col">
+          <h5 class="card-title"><%= flat.name %></h2>
+          <h6 class="card-subtitle mb-2 text-muted"><%= flat.address %></h6>
+          <p class="card-text"><%= raw("<i class='fa-solid fa-people-group'></i>")%> <%=flat.number_of_guests %>
+          <%= raw("<i class='fa-solid fa-euro-sign'></i>")%> <%= flat.price_per_night %></p>
+          <a href="#" class="card-link primary">More info</a>
+          <a href="#" class="card-link warning">Edit</a>
+          <a href="#" class="card-link danger">Remove</a>
+        </div>
+    <% end %>
+  </div>
+</div>
