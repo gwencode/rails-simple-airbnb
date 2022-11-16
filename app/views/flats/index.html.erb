@@ -4,12 +4,14 @@
 
   <div class="row">
       <% @flats.each do |flat| %>
-        <div class="card g-col-4 m-3" style="width: 18rem;">
+        <div class="card g-col-4 m-3 p-0" style="width: 18rem;">
           <div class="card-body">
             <h5 class="card-title"><%= flat.name %></h2>
             <h6 class="card-subtitle mb-2 text-muted"><%= flat.address %></h6>
             <p class="card-text"><%= raw("<i class='fa-solid fa-people-group'></i>")%> <%=flat.number_of_guests %>
             <%= raw("<i class='fa-solid fa-euro-sign'></i>")%> <%= flat.price_per_night %></p>
+          </div>
+          <div class="card-footer">
             <a href="#" class="card-link primary">More info</a>
             <a href="#" class="card-link warning">Edit</a>
             <a href="#" class="card-link danger">Remove</a>
